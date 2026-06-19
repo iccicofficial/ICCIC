@@ -89,7 +89,7 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 ICCIC · Vasavi College of Engineering. All rights reserved.</span>
-          <span>Springer · Scopus-Indexed Proceedings</span>
+          <span><a href="privacy.html">Privacy &amp; Cookies</a> · Proceedings to be submitted to Springer (Scopus-indexed series), subject to approval</span>
         </div>
       </div>
     </footer>
