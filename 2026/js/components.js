@@ -18,7 +18,7 @@
     { href: 'contact.html',        label: 'Contact' }
   ];
 
-  const CMT = 'https://cmt3.research.microsoft.com/ICCIC2025';
+  const CMT = 'https://cmt3.research.microsoft.com/ICCIC2026';
 
   // Current file name (default to index.html)
   let current = location.pathname.split('/').pop() || 'index.html';
