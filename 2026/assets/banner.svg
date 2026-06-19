@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" width="640" height="520" role="img" aria-label="Cognitive and intelligent computing illustration">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6d5dfc"/>
+      <stop offset="1" stop-color="#00d4ff"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="60%">
+      <stop offset="0" stop-color="#00d4ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9d8bff"/>
+      <stop offset="1" stop-color="#5fe6ff"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+  </defs>
+
+  <!-- halo -->
+  <circle cx="320" cy="225" r="250" fill="url(#halo)"/>
+
+  <!-- orbit rings -->
+  <g fill="none" stroke="url(#edge)" stroke-opacity="0.35" stroke-width="1.5">
+    <ellipse cx="320" cy="230" rx="235" ry="120" transform="rotate(-18 320 230)"/>
+    <ellipse cx="320" cy="230" rx="200" ry="200"/>
+    <ellipse cx="320" cy="230" rx="150" ry="235" transform="rotate(20 320 230)"/>
+  </g>
+
+  <!-- neural network constellation -->
+  <g stroke="url(#edge)" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round" filter="url(#soft)">
+    <path d="M150 150 L250 110 L360 140 L470 120"/>
+    <path d="M120 240 L210 210 L300 240 L400 220 L500 250"/>
+    <path d="M160 340 L260 360 L370 330 L470 360"/>
+    <path d="M250 110 L210 210 L260 360"/>
+    <path d="M360 140 L300 240 L370 330"/>
+    <path d="M470 120 L400 220 L470 360"/>
+    <path d="M210 210 L300 240 L400 220"/>
+  </g>
+
+  <!-- central cognitive core -->
+  <circle cx="320" cy="230" r="58" fill="url(#bg-grad)" opacity="0.18"/>
+  <circle cx="320" cy="230" r="40" fill="none" stroke="url(#edge)" stroke-width="2.5"/>
+  <g stroke="#eaf3ff" stroke-width="2.4" stroke-linecap="round" fill="none" opacity="0.92">
+    <path d="M300 214 q-10 16 4 28 q-12 14 6 24"/>
+    <path d="M340 214 q10 16 -4 28 q12 14 -6 24"/>
+    <path d="M320 206 L320 262"/>
+    <path d="M306 226 L334 226 M308 244 L332 244"/>
+  </g>
+
+  <!-- nodes -->
+  <g fill="#ffffff">
+    <circle cx="150" cy="150" r="6"/><circle cx="250" cy="110" r="7"/><circle cx="360" cy="140" r="6"/><circle cx="470" cy="120" r="7"/>
+    <circle cx="120" cy="240" r="6"/><circle cx="210" cy="210" r="8"/><circle cx="400" cy="220" r="8"/><circle cx="500" cy="250" r="6"/>
+    <circle cx="160" cy="340" r="6"/><circle cx="260" cy="360" r="7"/><circle cx="370" cy="330" r="7"/><circle cx="470" cy="360" r="6"/>
+    <circle cx="300" cy="240" r="5"/>
+  </g>
+  <g fill="#5fe6ff">
+    <circle cx="250" cy="110" r="3"/><circle cx="470" cy="120" r="3"/><circle cx="210" cy="210" r="3.5"/><circle cx="400" cy="220" r="3.5"/><circle cx="260" cy="360" r="3"/>
+  </g>
+
+  <!-- smart-city skyline (bottom) -->
+  <g fill="#0b1230" opacity="0.0"/>
+  <g fill="url(#bg-grad)" opacity="0.5">
+    <rect x="120" y="430" width="34" height="70" rx="3"/>
+    <rect x="166" y="400" width="28" height="100" rx="3"/>
+    <rect x="206" y="448" width="30" height="52" rx="3"/>
+    <rect x="248" y="412" width="26" height="88" rx="3"/>
+    <rect x="286" y="436" width="34" height="64" rx="3"/>
+    <rect x="332" y="392" width="28" height="108" rx="3"/>
+    <rect x="372" y="424" width="30" height="76" rx="3"/>
+    <rect x="414" y="446" width="26" height="54" rx="3"/>
+    <rect x="452" y="408" width="32" height="92" rx="3"/>
+    <rect x="496" y="438" width="26" height="62" rx="3"/>
+  </g>
+  <g fill="#aef3ff" opacity="0.85">
+    <rect x="174" y="412" width="4" height="6"/><rect x="182" y="412" width="4" height="6"/>
+    <rect x="256" y="424" width="4" height="6"/><rect x="264" y="424" width="4" height="6"/>
+    <rect x="340" y="404" width="4" height="6"/><rect x="348" y="404" width="4" height="6"/>
+    <rect x="460" y="420" width="4" height="6"/><rect x="468" y="420" width="4" height="6"/>
+  </g>
+</svg>

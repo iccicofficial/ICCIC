@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Preview 3 · Midnight Luxe — ICCIC-2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0d0a14; --bg2:#140f1f; --card:rgba(255,255,255,.035); --line:rgba(232,163,92,.18);
+    --ink:#f2ead9; --dim:#b6a98f; --mute:#7d7361;
+    --copper:#e8a35c; --rose:#e7748a; --gold:#f0c987;
+    --disp:'Syne',sans-serif; --body:'Hanken Grotesk',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--copper);color:#1a1208}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(55vw 50vw at 12% -8%,rgba(232,163,92,.16),transparent 60%),radial-gradient(50vw 45vw at 95% 5%,rgba(231,116,138,.12),transparent 58%),radial-gradient(60vw 50vw at 50% 115%,rgba(240,201,135,.08),transparent 60%)}
+  .wrap{width:min(92%,1180px);margin-inline:auto}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.04;letter-spacing:-.02em}
+  .grad{background:linear-gradient(100deg,var(--gold),var(--copper) 45%,var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .label{font-size:.74rem;text-transform:uppercase;letter-spacing:.22em;color:var(--copper);font-weight:600}
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(12px);background:rgba(13,10,20,.55);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+  .brand{font-family:var(--disp);font-weight:800;font-size:1.2rem;display:flex;align-items:center;gap:.7rem}
+  .logo{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--rose));color:#1a1208;display:grid;place-items:center;font-weight:800}
+  .navl{display:flex;gap:.4rem;font-size:.86rem}
+  .navl a{padding:.5rem .85rem;border-radius:999px;color:var(--dim)}
+  .navl a:hover{color:var(--ink);background:var(--card)}
+  .btn{font-family:var(--body);font-weight:600;font-size:.88rem;padding:.7rem 1.4rem;border-radius:999px;cursor:pointer;transition:.25s;display:inline-flex;gap:.5rem;align-items:center;border:1px solid transparent}
+  .btn.solid{background:linear-gradient(100deg,var(--gold),var(--copper));color:#1a1208;box-shadow:0 12px 30px -10px rgba(232,163,92,.5)}
+  .btn.solid:hover{transform:translateY(-3px)}
+  .btn.ghost{border-color:var(--line);color:var(--ink);background:var(--card)}
+  .btn.ghost:hover{border-color:var(--copper);transform:translateY(-3px)}
+  /* hero */
+  .hero{padding:5.5rem 0 4rem;text-align:center}
+  .tag{display:inline-flex;gap:.6rem;align-items:center;border:1px solid var(--line);background:var(--card);padding:.45rem 1.1rem;border-radius:999px;font-size:.8rem;color:var(--dim)}
+  .tag i{width:7px;height:7px;border-radius:50%;background:var(--copper);box-shadow:0 0 12px var(--copper)}
+  .hero h1{font-size:clamp(2.8rem,8vw,6rem);margin:1.6rem 0 1.2rem}
+  .hero p{max-width:58ch;margin:0 auto;color:var(--dim);font-size:1.12rem}
+  .cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+  .meta{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:2.4rem;font-size:.86rem;color:var(--mute)}
+  .meta b{color:var(--copper);font-weight:600}
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.8rem 1.2rem;text-align:center;backdrop-filter:blur(6px)}
+  .stat .n{font-family:var(--disp);font-weight:800;font-size:2.6rem;line-height:1}
+  .stat .t{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);margin-top:.5rem}
+  /* tracks */
+  section{padding:5rem 0}
+  .head{text-align:center;max-width:54ch;margin:0 auto 3rem}
+  .head h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-top:.8rem}
+  .head p{color:var(--dim);margin-top:.8rem}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+  .cell{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:2rem;backdrop-filter:blur(6px);transition:.3s;position:relative;overflow:hidden}
+  .cell:hover{transform:translateY(-6px);border-color:var(--copper)}
+  .ic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--rose));display:grid;place-items:center;color:#1a1208;font-family:var(--disp);font-weight:800;margin-bottom:1.1rem}
+  .cell h3{font-size:1.35rem;margin-bottom:.5rem}
+  .cell p{color:var(--dim);font-size:.96rem}
+  /* band */
+  .band{border-radius:30px;padding:4rem 2rem;text-align:center;background:linear-gradient(120deg,rgba(232,163,92,.16),rgba(231,116,138,.12));border:1px solid var(--line);position:relative;overflow:hidden}
+  .band h2{font-size:clamp(2rem,4.5vw,3.2rem)}
+  .band p{color:var(--dim);margin:1rem auto 1.8rem;max-width:50ch}
+  footer{border-top:1px solid var(--line);padding:2.4rem 0;color:var(--mute);font-size:.86rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+  @media(max-width:860px){.navl{display:none}.stats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav">
+  <div class="brand"><span class="logo">I</span>ICCIC&nbsp;2026</div>
+  <div class="navl"><a>About</a><a>Tracks</a><a>Speakers</a><a>Papers</a><a>Venue</a></div>
+  <a class="btn solid">Submit Paper</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag"><i></i> 6th International Conference · 11–12 December 2026</span>
+  <h1>Cognitive &amp; <span class="grad">Intelligent</span><br>Computing</h1>
+  <p>A distinguished, Springer-published conference at Vasavi College of Engineering, Hyderabad — six years of research in the Scopus-indexed Cognitive Science &amp; Technology series.</p>
+  <div class="cta"><a class="btn solid">Submit Your Paper →</a><a class="btn ghost">Register Now</a></div>
+  <div class="meta"><span>📅 <b>Dec 11–12, 2026</b></span><span>📍 <b>Hyderabad, India</b></span><span>📚 <b>Springer · Scopus</b></span></div>
+</div></header>
+
+<section style="padding-top:0"><div class="wrap"><div class="stats">
+  <div class="stat"><div class="n grad">06</div><div class="t">Editions</div></div>
+  <div class="stat"><div class="n grad">10</div><div class="t">Springer Volumes</div></div>
+  <div class="stat"><div class="n grad">100%</div><div class="t">Scopus-Indexed</div></div>
+  <div class="stat"><div class="n grad">2021</div><div class="t">Since</div></div>
+</div></div></section>
+
+<section><div class="wrap">
+  <div class="head"><span class="label">Research Tracks</span><h2>Submit across four domains</h2><p>A growing legacy of research in cognitive &amp; intelligent computing.</p></div>
+  <div class="cards">
+    <div class="cell"><div class="ic">01</div><h3>AI &amp; Machine Learning</h3><p>Deep learning, generative models, reinforcement learning and applied ML systems.</p></div>
+    <div class="cell"><div class="ic">02</div><h3>Cognitive Systems</h3><p>Cognitive architectures, neuromorphic computing and human-aligned reasoning.</p></div>
+    <div class="cell"><div class="ic">03</div><h3>Intelligent Data</h3><p>Data engineering, analytics, knowledge graphs and decision intelligence.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="band">
+    <span class="label">Call for Papers — Open</span>
+    <h2>Add your work to the <span class="grad">legacy</span></h2>
+    <p>Join a proven, Springer-published conference now entering its sixth year.</p>
+    <a class="btn solid">Submit Your Paper →</a>
+  </div>
+</div></section>
+
+<footer class="wrap"><span>© 2026 ICCIC · Vasavi College of Engineering</span><span>Springer · Scopus-Indexed Proceedings</span></footer>
+</body>
+</html>

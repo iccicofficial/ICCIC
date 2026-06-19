@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Preview 1 · Terminal — ICCIC-2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#070a07; --panel:#0c110c; --line:rgba(182,255,58,.16);
+    --ink:#d8e6cf; --dim:#8aa07e; --mute:#5d6e54;
+    --neon:#b6ff3a; --amber:#ffb43a;
+    --mono:'IBM Plex Mono',monospace; --disp:'Chakra Petch',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:var(--mono);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(ellipse 100% 80% at 50% 0,#000 30%,transparent 90%)}
+  body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(60vw 40vw at 80% -5%,rgba(182,255,58,.08),transparent 60%),radial-gradient(50vw 40vw at 0% 100%,rgba(255,180,58,.06),transparent 60%)}
+  .wrap{width:min(92%,1180px);margin-inline:auto}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--disp);font-weight:600;letter-spacing:-.01em;line-height:1.05}
+  .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:var(--neon)}
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(8px);background:rgba(7,10,7,.7);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+  .brand{font-family:var(--disp);font-weight:700;font-size:1.1rem;display:flex;align-items:center;gap:.6rem}
+  .brand b{color:var(--neon)}
+  .logo{width:34px;height:34px;border:1px solid var(--neon);color:var(--neon);display:grid;place-items:center;font-weight:700}
+  .navl{display:flex;gap:.2rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+  .navl a{padding:.5rem .7rem;color:var(--dim)}
+  .navl a:hover{color:var(--neon)}
+  .btn{font-family:var(--mono);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;padding:.7rem 1.2rem;border:1px solid var(--neon);color:var(--neon);cursor:pointer;transition:.2s;display:inline-flex;gap:.5rem;align-items:center}
+  .btn:hover{background:var(--neon);color:#070a07}
+  .btn.solid{background:var(--neon);color:#070a07}
+  .btn.solid:hover{background:var(--amber);border-color:var(--amber)}
+  /* hero */
+  .hero{padding:6rem 0 4rem}
+  .tag{display:inline-flex;gap:.6rem;align-items:center;border:1px solid var(--line);padding:.4rem .9rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dim)}
+  .tag i{width:7px;height:7px;background:var(--neon);border-radius:50%;animation:bl 1.4s steps(2) infinite}
+  @keyframes bl{50%{opacity:.2}}
+  .hero h1{font-size:clamp(2.6rem,7vw,5.4rem);margin:1.6rem 0 1rem;text-transform:uppercase}
+  .hero h1 .c{color:var(--neon)}
+  .hero p{max-width:60ch;color:var(--dim);font-size:1.02rem}
+  .hero p .blink{color:var(--neon)}
+  .meta{display:flex;flex-wrap:wrap;gap:1.6rem;margin:1.8rem 0;font-size:.82rem;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+  .meta span b{color:var(--ink)}
+  .cta{display:flex;gap:1rem;flex-wrap:wrap}
+  /* stats */
+  .strip{border-block:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+  .strip div{padding:2rem 1.4rem;border-right:1px solid var(--line)}
+  .strip div:last-child{border-right:0}
+  .strip .n{font-family:var(--disp);font-size:2.6rem;color:var(--neon);line-height:1}
+  .strip .t{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);margin-top:.5rem}
+  /* tracks */
+  section{padding:5rem 0}
+  .head{margin-bottom:2.4rem}
+  .head h2{font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;margin-top:.6rem}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .cell{background:var(--panel);padding:1.8rem;transition:.2s;position:relative}
+  .cell:hover{background:#0f160f}
+  .cell .k{font-size:.72rem;color:var(--amber);letter-spacing:.1em}
+  .cell h3{font-size:1.25rem;margin:.7rem 0 .5rem}
+  .cell p{font-size:.9rem;color:var(--dim)}
+  .cell::before{content:"+";position:absolute;top:1.2rem;right:1.4rem;color:var(--neon)}
+  /* cta band */
+  .band{border:1px solid var(--neon);padding:3.5rem 2rem;text-align:center;background:linear-gradient(rgba(182,255,58,.05),transparent)}
+  .band h2{font-size:clamp(1.8rem,4vw,2.8rem);text-transform:uppercase}
+  .band p{color:var(--dim);margin:1rem auto 1.6rem;max-width:50ch}
+  footer{border-top:1px solid var(--line);padding:2.4rem 0;color:var(--mute);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+  @media(max-width:860px){.navl{display:none}.strip{grid-template-columns:repeat(2,1fr)}.strip div:nth-child(2){border-right:0}.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav">
+  <div class="brand"><span class="logo">I</span>ICCIC<b>_2026</b></div>
+  <div class="navl"><a>//home</a><a>//tracks</a><a>//speakers</a><a>//papers</a><a>//venue</a></div>
+  <a class="btn solid">Submit_Paper</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag"><i></i> 6th_edition · dec 11–12 2026 · hyderabad</span>
+  <h1>Cognitive &amp;<br><span class="c">Intelligent</span> Computing<span style="color:var(--neon)">_</span></h1>
+  <p>&gt; A Springer-published, Scopus-indexed conference at Vasavi College of Engineering. Submit your research to the <span class="blink">cognitive.science/technology</span> series.</p>
+  <div class="meta">
+    <span>EDITION: <b>06</b></span><span>DATE: <b>11–12.12.2026</b></span><span>VENUE: <b>Hyderabad, IN</b></span><span>PUBLISHER: <b>Springer</b></span>
+  </div>
+  <div class="cta"><a class="btn solid">Submit_Paper →</a><a class="btn">Register</a></div>
+</div></header>
+
+<div class="wrap"><div class="strip">
+  <div><div class="n">06</div><div class="t">Editions</div></div>
+  <div><div class="n">10</div><div class="t">Springer Volumes</div></div>
+  <div><div class="n">100%</div><div class="t">Scopus-Indexed</div></div>
+  <div><div class="n">2021</div><div class="t">Since</div></div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="head"><span class="label">// research tracks</span><h2>Submit across<br>four domains</h2></div>
+  <div class="cards">
+    <div class="cell"><div class="k">TRK_01</div><h3>AI &amp; Machine Learning</h3><p>Deep learning, generative models, reinforcement learning and applied ML systems.</p></div>
+    <div class="cell"><div class="k">TRK_02</div><h3>Cognitive Systems</h3><p>Cognitive architectures, neuromorphic computing and human-aligned reasoning.</p></div>
+    <div class="cell"><div class="k">TRK_03</div><h3>Intelligent Data</h3><p>Data engineering, analytics, knowledge graphs and decision intelligence.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="band">
+    <span class="label">// call for papers — open</span>
+    <h2>Add your work to the legacy</h2>
+    <p>&gt; Join a proven, Springer-published conference now entering its sixth year.</p>
+    <a class="btn solid">Submit_Paper →</a>
+  </div>
+</div></section>
+
+<footer class="wrap"><span>© 2026 ICCIC · Vasavi College of Engineering</span><span>Springer · Scopus-Indexed Proceedings</span></footer>
+</body>
+</html>

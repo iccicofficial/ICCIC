@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="ICCIC logo">
+  <defs>
+    <linearGradient id="lg-badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6d5dfc"/>
+      <stop offset="1" stop-color="#00d4ff"/>
+    </linearGradient>
+    <linearGradient id="lg-node" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d7e4ff"/>
+    </linearGradient>
+    <filter id="lg-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Badge -->
+  <rect x="4" y="4" width="112" height="112" rx="28" fill="url(#lg-badge)"/>
+  <rect x="4" y="4" width="112" height="112" rx="28" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
+
+  <!-- Neural / cognitive network (left organic half + right circuit half) -->
+  <g stroke="#ffffff" stroke-opacity="0.85" stroke-width="2.4" stroke-linecap="round" filter="url(#lg-glow)">
+    <!-- edges -->
+    <path d="M40 42 L60 30 L80 42" fill="none"/>
+    <path d="M34 60 L40 42 M34 60 L48 64 M48 64 L60 52 M60 52 L60 30" fill="none"/>
+    <path d="M80 42 L86 60 L74 74 L60 70 L48 64" fill="none"/>
+    <path d="M60 52 L74 74 M60 70 L52 88 M74 74 L70 90" fill="none"/>
+    <path d="M86 60 L98 58 M34 60 L22 58 M60 30 L60 18" fill="none"/>
+  </g>
+
+  <!-- nodes -->
+  <g fill="url(#lg-node)">
+    <circle cx="60" cy="30" r="5.4"/>
+    <circle cx="40" cy="42" r="4.6"/>
+    <circle cx="80" cy="42" r="4.6"/>
+    <circle cx="34" cy="60" r="4.6"/>
+    <circle cx="86" cy="60" r="4.6"/>
+    <circle cx="48" cy="64" r="4.2"/>
+    <circle cx="60" cy="52" r="4.2"/>
+    <circle cx="74" cy="74" r="4.6"/>
+    <circle cx="60" cy="70" r="4.2"/>
+    <circle cx="52" cy="88" r="4"/>
+    <circle cx="70" cy="90" r="4"/>
+  </g>
+  <!-- terminal pins -->
+  <g fill="#ffffff" fill-opacity="0.7">
+    <circle cx="98" cy="58" r="2.6"/>
+    <circle cx="22" cy="58" r="2.6"/>
+    <circle cx="60" cy="18" r="2.6"/>
+  </g>
+</svg>
