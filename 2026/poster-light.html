@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ICCIC-2026 — Promotional Poster (Light)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f4f6f0; --panel:#ffffff; --panel2:#eef2e8; --line:rgba(22,42,16,.14); --line2:rgba(22,42,16,.24);
+    --ink:#14210d; --dim:#46563e; --mute:#7c8a72; --accent:#1c8a45; --accent-d:#157038; --amber:#b4690e;
+    --mono:'IBM Plex Mono',monospace; --disp:'Chakra Petch',sans-serif;
+    --shadow:0 18px 40px -26px rgba(20,33,13,.45);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#e3e7dd;display:flex;justify-content:center;padding:24px;font-family:var(--mono)}
+  @page{size:1080px 1528px;margin:0}
+  @media print{
+    body{padding:0;background:var(--bg)}
+    .poster{box-shadow:none}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+  .poster{
+    position:relative;width:1080px;height:1528px;overflow:hidden;
+    background:var(--bg);color:var(--ink);padding:56px 54px 44px;
+    display:flex;flex-direction:column;box-shadow:0 30px 70px -40px rgba(20,33,13,.5);
+  }
+  .poster::before{content:"";position:absolute;inset:0;z-index:0;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:44px 44px;mask-image:radial-gradient(ellipse 95% 75% at 50% 0,#000 35%,transparent 92%)}
+  .poster::after{content:"";position:absolute;inset:0;z-index:0;
+    background:radial-gradient(55vw 36vw at 84% -6%,rgba(28,138,69,.10),transparent 60%),radial-gradient(50vw 40vw at 4% 104%,rgba(180,105,14,.08),transparent 60%)}
+  .poster>*{position:relative;z-index:1}
+  .cnr{position:absolute;width:34px;height:34px;border:2px solid var(--accent);z-index:2}
+  .cnr.tl{top:20px;left:20px;border-right:0;border-bottom:0}
+  .cnr.tr{top:20px;right:20px;border-left:0;border-bottom:0}
+  .cnr.bl{bottom:20px;left:20px;border-right:0;border-top:0}
+  .cnr.br{bottom:20px;right:20px;border-left:0;border-top:0}
+
+  h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.02;text-transform:uppercase}
+
+  .top{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);border-bottom:1px solid var(--line2);padding-bottom:14px}
+  .top b{color:var(--ink)}
+  .brand{display:flex;align-items:center;gap:11px}
+  .logo{width:34px;height:34px;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--disp);font-weight:700;font-size:18px}
+  .brand .bt{font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:.02em;color:var(--ink)}
+
+  .eye{display:inline-flex;align-items:center;gap:10px;margin-top:24px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-d);font-weight:600}
+  .eye i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(28,138,69,.16);animation:bl 1.4s steps(2) infinite}
+  @keyframes bl{50%{opacity:.25}}
+
+  .hero h1{font-size:78px;letter-spacing:-.005em;margin-top:12px;color:var(--ink)}
+  .hero h1 .s{color:var(--accent)}
+  .hero .sub{font-family:var(--disp);font-weight:600;text-transform:none;font-size:21px;color:var(--dim);margin-top:14px;letter-spacing:.01em}
+  .cur{color:var(--accent)}
+
+  .meta{display:grid;grid-template-columns:repeat(4,1fr);margin-top:26px;border:1px solid var(--line2);background:#fff;box-shadow:var(--shadow)}
+  .meta div{padding:16px 18px;border-right:1px solid var(--line)}
+  .meta div:last-child{border-right:0}
+  .meta .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+  .meta .v{font-family:var(--disp);font-weight:700;font-size:18px;color:var(--ink);margin-top:7px;text-transform:uppercase;line-height:1.12}
+  .meta .v small{display:block;font-family:var(--mono);font-weight:400;font-size:11px;color:var(--dim);text-transform:none;letter-spacing:.02em;margin-top:3px}
+
+  .lbl{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-d);font-weight:600;margin:26px 0 13px;display:flex;align-items:center;gap:10px}
+  .lbl::after{content:"";flex:1;height:1px;background:var(--line2)}
+
+  .tracks{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line2);border:1px solid var(--line2);box-shadow:var(--shadow)}
+  .trk{background:#fff;padding:18px 20px;position:relative}
+  .trk .n{font-family:var(--disp);font-weight:700;font-size:13px;color:var(--amber);letter-spacing:.06em}
+  .trk h3{font-size:18.5px;margin:8px 0 6px;line-height:1.05;color:var(--ink)}
+  .trk p{font-family:var(--mono);font-size:12px;color:var(--dim);line-height:1.5;text-transform:none}
+
+  .row{display:grid;grid-template-columns:1.18fr 1fr;gap:26px;margin-top:8px}
+  .dates .d{display:flex;align-items:baseline;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line2)}
+  .dates .d:last-child{border-bottom:0}
+  .dates .dd{font-family:var(--disp);font-weight:700;font-size:15px;color:var(--accent-d);min-width:140px}
+  .dates .dl{font-family:var(--mono);font-size:13px;color:var(--ink);text-transform:none}
+  .dates .dl span{color:var(--amber);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+
+  .submit{border:1.5px solid var(--accent);background:linear-gradient(rgba(28,138,69,.06),#fff);padding:18px 18px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:var(--shadow)}
+  .submit .h{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:15px;letter-spacing:.04em;color:var(--ink)}
+  .qr{width:150px;height:150px;background:#fff;padding:8px;margin:12px 0 10px;border:1px solid var(--line2)}
+  .qr img{width:100%;height:100%;display:block;image-rendering:pixelated}
+  .submit .u{font-family:var(--mono);font-size:12.5px;color:var(--accent-d);font-weight:600;word-break:break-all;line-height:1.4}
+  .submit .cmt{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-top:8px;text-transform:none}
+  .submit .cmt b{color:var(--ink)}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-family:var(--mono);font-size:11.5px;color:var(--dim);border:1px solid var(--line2);padding:6px 11px;text-transform:none;background:#fff}
+
+  .strip2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .box{border:1px solid var(--line2);background:#fff;padding:14px 16px;box-shadow:var(--shadow)}
+  .box .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-d);font-weight:600}
+  .box .t{font-family:var(--mono);font-size:12.5px;color:var(--ink);margin-top:7px;text-transform:none;line-height:1.5}
+  .box .t b{color:var(--accent-d)}
+  .box .t small{color:var(--mute)}
+
+  .foot{margin-top:auto;border-top:1px solid var(--line2);padding-top:14px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+  .foot .l{font-family:var(--mono);font-size:11.5px;color:var(--dim);line-height:1.6;text-transform:none}
+  .foot .l b{color:var(--ink)}
+  .foot .r{text-align:right;font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:13px;color:var(--accent-d);letter-spacing:.04em;line-height:1.3}
+  .foot .r small{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;color:var(--mute);letter-spacing:.1em;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="poster">
+  <span class="cnr tl"></span><span class="cnr tr"></span><span class="cnr bl"></span><span class="cnr br"></span>
+
+  <div class="top">
+    <div class="brand"><span class="logo">I</span><span class="bt">ICCIC&middot;2026</span></div>
+    <div style="text-align:right">Hosted by <b>Vasavi College of Engineering, Hyderabad</b><br>IEEE Computer Society (Hyderabad) &middot; IEEE SB VCE &middot; Computer Society of India</div>
+  </div>
+
+  <div class="hero">
+    <span class="eye"><i></i> 6th International Conference &middot; Call for Papers — Open</span>
+    <h1>Cognitive &amp;<br><span class="s">Intelligent</span> Computing<span class="cur">_</span></h1>
+    <div class="sub">The 6th International Conference on Cognitive &amp; Intelligent Computing (ICCIC&nbsp;-&nbsp;2026)</div>
+  </div>
+
+  <div class="meta">
+    <div><div class="k">Dates</div><div class="v">11&ndash;12 Dec 2026<small>tentative</small></div></div>
+    <div><div class="k">Venue</div><div class="v">Hyderabad<small>Vasavi College of Engg., India</small></div></div>
+    <div><div class="k">Mode</div><div class="v">Hybrid<small>on-site &amp; virtual</small></div></div>
+    <div><div class="k">Publication</div><div class="v">Springer<small>Scopus series · subject to approval</small></div></div>
+  </div>
+
+  <div class="lbl">// Research Tracks</div>
+  <div class="tracks">
+    <div class="trk"><div class="n">TRK_01</div><h3>Computational Intelligence &amp; Neural Networks</h3><p>Deep &amp; reinforcement learning, evolutionary computation, genetic algorithms, fuzzy logic, swarm intelligence.</p></div>
+    <div class="trk"><div class="n">TRK_02</div><h3>Cognitive Computing</h3><p>Knowledge representation, cognitive architectures, perception, attention and decision-making.</p></div>
+    <div class="trk"><div class="n">TRK_03</div><h3>Machine Learning &amp; Intelligent Robots</h3><p>Autonomous systems, robotics, planning, perception and human-robot interaction.</p></div>
+    <div class="trk"><div class="n">TRK_04</div><h3>Natural Language Learning</h3><p>NLP, large language models, speech, semantics, dialogue and multilingual understanding.</p></div>
+  </div>
+
+  <div class="row">
+    <div>
+      <div class="lbl">// Important Dates</div>
+      <div class="dates">
+        <div class="d"><div class="dd">31 Oct 2026</div><div class="dl">Paper Submission <span>Hard Deadline</span></div></div>
+        <div class="d"><div class="dd">20 Nov 2026</div><div class="dl">Acceptance Notification</div></div>
+        <div class="d"><div class="dd">28 Nov 2026</div><div class="dl">Camera-Ready &amp; Registration</div></div>
+        <div class="d"><div class="dd">11&ndash;12 Dec 2026</div><div class="dl">Conference Days</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="lbl">// Submit</div>
+      <div class="submit">
+        <div class="h">Scan to visit &amp; submit</div>
+        <div class="qr"><img src="assets/qr-iccic2026.png" alt="QR code to ICCIC-2026 website" /></div>
+        <div class="u">iccicofficial.github.io/ICCIC/2026</div>
+        <div class="cmt">Submit via <b>Microsoft CMT</b><br>cmt3.research.microsoft.com/ICCIC2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lbl">// Topics of Interest</div>
+  <div class="chips">
+    <span class="chip">Deep Learning</span><span class="chip">Smart Cities</span><span class="chip">Cyber-Physical Systems</span>
+    <span class="chip">Explainable AI</span><span class="chip">Edge &amp; IoT Intelligence</span><span class="chip">Computer Vision</span>
+    <span class="chip">NLP &amp; LLMs</span><span class="chip">Reinforcement Learning</span><span class="chip">Healthcare AI</span>
+    <span class="chip">Big Data Analytics</span><span class="chip">Cybersecurity &amp; AI</span><span class="chip">Pattern Recognition</span>
+  </div>
+
+  <div class="strip2">
+    <div class="box"><div class="k">Registration</div><div class="t"><b>Indian:</b> INR 10,000 &nbsp;&middot;&nbsp; <b>International:</b> USD 300 &nbsp;<small>(up to 6 pages)</small><br><small>Taxes (GST)/bank/gateway charges as per norms.</small></div></div>
+    <div class="box"><div class="k">Publication</div><div class="t">Proceedings to be submitted to <b>Springer</b> — <i>Cognitive Science &amp; Technology</i> (Scopus-indexed) series, <small>subject to approval, as in previous editions.</small></div></div>
+  </div>
+
+  <div class="foot">
+    <div class="l"><b>Conference Secretariat</b><br>convenericcic@gmail.com &nbsp;&middot;&nbsp; +91 98491 15882<br>Vasavi College of Engineering, Ibrahimbagh, Hyderabad &ndash; 500031</div>
+    <div class="r">ICCIC-2026<small>iccicofficial.github.io/ICCIC/2026</small></div>
+  </div>
+</div>
+</body>
+</html>
